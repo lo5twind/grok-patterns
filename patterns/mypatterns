@@ -1,0 +1,5 @@
+DATE_YMD %{YEAR}/%{MONTHNUM}/%{MONTHDAY} %{DAY} %{TIME}
+DATE %{DATE_US}|%{DATE_EU}|%{DATE_YMD}\
+SWORD %{WORD}|%{SPACE}
+
+IPT_LOG %{INT:logtime} %{DATE_YMD:logdate} ipt_log=%{WORD:action} IN=%{SWORD:inport} OUT=%{SWORD:outport} MAC=%{MAC:mac_addr} SRC=%{IP:source_ip} DST=%{IP:dest_ip} LEN=%{INT:length} TOS=%{DATA:tos} PREC=%{DATA:prec} TTL=%{INT:ttl} ID=%{INT:id} PROTO=%{WORD:proto} TYPE=%{INT:type} CODE=%{INT:code} ID=%{INT:id2} SEQ=%{INT:seq}
